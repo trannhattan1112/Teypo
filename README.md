@@ -1,118 +1,123 @@
 <div align="center">
-  <img src="docs/icon.png" width="128" alt="Teypo icon">
+  <img src="docs/icon.png" width="120" alt="Teypo">
   <h1>Teypo</h1>
-  <p>Mechanical keyboard sounds for your Mac, as you type.<br>
-  Tiếng bàn phím cơ cho máy Mac, vang lên theo từng phím bạn gõ.</p>
-  <p><a href="../../releases/latest"><b>⬇️ Download / Tải về</b></a></p>
+  <p>Mechanical keyboard sounds for your Mac.</p>
+  <p>
+    <a href="../../releases/latest/download/Teypo.zip"><b>Download for macOS</b></a>
+    &nbsp;·&nbsp;
+    <a href="#english">English</a>
+    &nbsp;·&nbsp;
+    <a href="#tiếng-việt">Tiếng Việt</a>
+  </p>
 </div>
 
----
+<br>
 
 ## English
 
-Teypo lives in your menu bar and plays the sound of a real mechanical switch every time you press a key, in any app.
+Teypo is a small menu bar app that plays the sound of a real mechanical switch each time you press a key, in any application.
 
-- **4 switch sounds** recorded from real switches: Cream, Holy Panda, Alpaca, Ink Black
-- Separate press and release sounds, with their own sounds for Space, Enter and Delete
-- Stereo that follows where the key sits on the keyboard
-- Volume control, quick on/off, open at login
-- English and Vietnamese, light and dark mode
+### Features
 
-### Install
+- Four switch profiles recorded from real switches: Cream, Holy Panda, Alpaca and Ink Black
+- Separate press and release sounds, with dedicated sounds for Space, Enter and Delete
+- Stereo positioning that follows each key's place on the keyboard
+- Volume control, quick on and off, and open at login
+- English and Vietnamese, in light and dark appearance
 
-Requires macOS 13 or later. Built and tested on Apple silicon.
+### Requirements
 
-**Option 1 — Terminal (no warning, fastest)**
+macOS 13 or later. Built and tested on Apple silicon.
 
-Open the **Terminal** app, paste this line and press Return:
+### Installation
+
+**Using Terminal (recommended)**
+
+Open the Terminal app, paste the line below and press Return. It downloads Teypo from this page, places it in Applications and opens it.
 
 ```bash
 curl -L https://github.com/trannhattan1112/Teypo/releases/latest/download/Teypo.zip -o /tmp/Teypo.zip && ditto -x -k /tmp/Teypo.zip /Applications && open /Applications/Teypo.app
 ```
 
-It downloads Teypo from this page, puts it in Applications and opens it. Nothing else is installed.
+**Manual download**
 
-**Option 2 — Download and double-click**
+1. Download [Teypo.zip](../../releases/latest/download/Teypo.zip) and unzip it.
+2. Move Teypo to your Applications folder and open it.
+3. Teypo is not yet notarized by Apple, so macOS will ask for confirmation the first time. Choose **Done**, then go to **System Settings → Privacy & Security** and select **Open Anyway**.
 
-1. Download **Teypo.zip** from the [latest release](../../releases/latest) and unzip it.
-2. Drag **Teypo** into your **Applications** folder and open it.
-3. macOS shows the warning below. Click **Done**, then open **System Settings → Privacy & Security**, scroll down and click **Open Anyway**. You only do this once.
+**First launch**
 
-<img src="docs/warning.png" width="260" alt="macOS warning: Teypo Not Opened">
+1. Click the keyboard icon in the menu bar and choose the permission item.
+2. Turn on Teypo under **Input Monitoring**.
+3. Quit Teypo from its menu and open it again.
 
-**Then, for both options**
+### Privacy and safety
 
-1. Click the keyboard icon in the menu bar, choose the permission item, and turn on **Teypo** under **Input Monitoring**.
-2. Quit Teypo from its menu and open it again. Start typing.
+Teypo uses Input Monitoring only to know when a key is pressed or released, so that it can play a sound. It does not record, store or transmit what you type.
 
-### Why does macOS show a warning?
+| | |
+|---|---|
+| Network access | None. Teypo runs in the macOS sandbox without network permission. |
+| Virus scan | No security vendor flagged the file. [View the VirusTotal report](https://www.virustotal.com/gui/file/07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28). |
+| SHA-256 (version 1.0) | `07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28` |
 
-The warning does not mean Teypo contains malware. macOS shows it for every app whose developer has not paid for Apple's developer program, which Teypo's has not yet. Things you can check yourself:
-
-- **No network access.** Teypo runs in the macOS sandbox and does not request network permission, so it cannot send anything anywhere. Verify with `codesign -d --entitlements - /Applications/Teypo.app`.
-- **File checksum.** The SHA-256 of `Teypo.zip` (version 1.0) is `07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28`. Verify with `shasum -a 256 Teypo.zip`.
-- **Virus scan: clean.** No security vendor on VirusTotal flagged this file as malicious. [See the scan result](https://www.virustotal.com/gui/file/07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28), or upload the zip there yourself to check.
-
-### Privacy
-
-Teypo needs Input Monitoring only to know *when* a key goes down or up so it can play a sound. It does not record, store or send what you type. It runs in the macOS sandbox with no network access.
-
----
+<br>
 
 ## Tiếng Việt
 
-Teypo nằm trên thanh menu và phát tiếng switch cơ thật mỗi khi bạn nhấn phím, ở bất kỳ ứng dụng nào.
+Teypo là một ứng dụng nhỏ trên thanh menu, phát tiếng switch cơ thật mỗi khi bạn nhấn phím, trong mọi ứng dụng.
 
-- **4 kiểu tiếng switch** thu từ switch thật: Cream, Holy Panda, Alpaca, Ink Black
+### Tính năng
+
+- Bốn kiểu tiếng thu từ switch thật: Cream, Holy Panda, Alpaca và Ink Black
 - Tiếng nhấn và tiếng nhả riêng, có tiếng riêng cho Space, Enter và phím xoá
-- Âm thanh trái/phải theo vị trí phím trên bàn phím
-- Chỉnh âm lượng, bật/tắt nhanh, mở cùng lúc đăng nhập
-- Tiếng Việt và tiếng Anh, nền sáng và nền tối
+- Âm thanh trái phải theo vị trí từng phím trên bàn phím
+- Chỉnh âm lượng, bật tắt nhanh, mở cùng lúc đăng nhập
+- Tiếng Việt và tiếng Anh, giao diện sáng và tối
+
+### Yêu cầu
+
+macOS 13 trở lên. Được xây dựng và chạy thử trên máy Apple silicon.
 
 ### Cài đặt
 
-Cần macOS 13 trở lên. Được build và chạy thử trên máy Apple silicon.
+**Dùng Terminal (khuyên dùng)**
 
-**Cách 1 — Dùng Terminal (không hiện cảnh báo, nhanh nhất)**
-
-Mở ứng dụng **Terminal**, dán dòng này rồi nhấn Return:
+Mở ứng dụng Terminal, dán dòng dưới đây rồi nhấn Return. Lệnh này tải Teypo từ chính trang này, đặt vào Applications và mở ứng dụng.
 
 ```bash
 curl -L https://github.com/trannhattan1112/Teypo/releases/latest/download/Teypo.zip -o /tmp/Teypo.zip && ditto -x -k /tmp/Teypo.zip /Applications && open /Applications/Teypo.app
 ```
 
-Lệnh này tải Teypo từ chính trang này, đặt vào Applications và mở lên. Không cài thêm gì khác.
+**Tải thủ công**
 
-**Cách 2 — Tải về rồi bấm đúp**
+1. Tải [Teypo.zip](../../releases/latest/download/Teypo.zip) rồi giải nén.
+2. Chuyển Teypo vào thư mục Applications và mở ứng dụng.
+3. Teypo chưa được Apple xác nhận, nên macOS sẽ hỏi lại ở lần mở đầu tiên. Chọn **Done**, sau đó vào **System Settings → Privacy & Security** và chọn **Open Anyway**.
 
-1. Tải **Teypo.zip** ở [bản phát hành mới nhất](../../releases/latest) rồi giải nén.
-2. Kéo **Teypo** vào thư mục **Applications** và mở nó.
-3. macOS hiện cảnh báo như hình dưới. Bấm **Done**, rồi mở **System Settings → Privacy & Security**, kéo xuống và bấm **Open Anyway**. Chỉ cần làm một lần.
+**Lần mở đầu tiên**
 
-<img src="docs/warning.png" width="260" alt="Cảnh báo của macOS: Teypo Not Opened">
+1. Bấm biểu tượng bàn phím trên thanh menu và chọn mục cấp quyền.
+2. Bật Teypo trong **Input Monitoring**.
+3. Thoát Teypo từ menu của ứng dụng rồi mở lại.
 
-**Sau đó, với cả hai cách**
+### Quyền riêng tư và an toàn
 
-1. Bấm biểu tượng bàn phím trên thanh menu, chọn mục cấp quyền, rồi bật **Teypo** trong **Input Monitoring**.
-2. Thoát Teypo từ menu của nó rồi mở lại. Gõ thử.
+Teypo dùng quyền Input Monitoring chỉ để biết khi nào một phím được nhấn hoặc nhả, nhằm phát âm thanh. Ứng dụng không ghi lại, không lưu trữ và không truyền đi nội dung bạn gõ.
 
-### Vì sao macOS hiện cảnh báo?
+| | |
+|---|---|
+| Truy cập mạng | Không có. Teypo chạy trong sandbox của macOS và không có quyền mạng. |
+| Quét virus | Không hãng bảo mật nào đánh dấu tệp này. [Xem báo cáo VirusTotal](https://www.virustotal.com/gui/file/07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28). |
+| SHA-256 (phiên bản 1.0) | `07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28` |
 
-Cảnh báo này không có nghĩa Teypo chứa mã độc. macOS hiện nó với mọi ứng dụng mà nhà phát triển chưa đóng phí chương trình nhà phát triển của Apple, và Teypo hiện chưa đóng. Những điều bạn có thể tự kiểm tra:
-
-- **Không có quyền truy cập mạng.** Teypo chạy trong sandbox của macOS và không xin quyền mạng, nên không thể gửi gì đi đâu. Kiểm tra bằng lệnh `codesign -d --entitlements - /Applications/Teypo.app`.
-- **Mã kiểm tra file.** SHA-256 của `Teypo.zip` (phiên bản 1.0) là `07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28`. Kiểm tra bằng lệnh `shasum -a 256 Teypo.zip`.
-- **Quét virus: sạch.** Không hãng bảo mật nào trên VirusTotal đánh dấu file này là độc hại. [Xem kết quả quét](https://www.virustotal.com/gui/file/07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28), hoặc tự đưa file zip lên đó để kiểm tra.
-
-### Quyền riêng tư
-
-Teypo cần quyền Input Monitoring chỉ để biết *khi nào* một phím được nhấn hay nhả, nhằm phát tiếng. Ứng dụng không ghi lại, không lưu và không gửi đi những gì bạn gõ. Teypo chạy trong sandbox của macOS, không có quyền truy cập mạng.
+<br>
 
 ---
 
 <div align="center">
-  <img src="docs/about.png" width="340" alt="Teypo about window">
-  <p>Design by Tran Nhat Tan · Teypo™ · © 2026</p>
-  <p><sub>Teypo is free to download and use. The app itself is not open source.<br>
-  Switch recordings by Thomas Lai (kbsim), used under the MIT License — see <a href="THIRD-PARTY-NOTICES.md">THIRD-PARTY-NOTICES</a>.</sub></p>
+  <img src="docs/about.png" width="300" alt="About Teypo">
+  <p>Designed by Tran Nhat Tan<br>Teypo™ · © 2026</p>
+  <p><sub>Teypo is free to download and use. Its source code is not published.<br>
+  Switch recordings by Thomas Lai (kbsim), used under the MIT License. See <a href="THIRD-PARTY-NOTICES.md">third-party notices</a>.</sub></p>
 </div>
