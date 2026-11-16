@@ -22,11 +22,36 @@ Teypo lives in your menu bar and plays the sound of a real mechanical switch eve
 
 Requires macOS 13 or later. Built and tested on Apple silicon.
 
-1. Download **Teypo-1.0.zip** from the [latest release](../../releases/latest) and unzip it.
+**Option 1 — Terminal (no warning, fastest)**
+
+Open the **Terminal** app, paste this line and press Return:
+
+```bash
+curl -L https://github.com/trannhattan1112/Teypo/releases/latest/download/Teypo.zip -o /tmp/Teypo.zip && ditto -x -k /tmp/Teypo.zip /Applications && open /Applications/Teypo.app
+```
+
+It downloads Teypo from this page, puts it in Applications and opens it. Nothing else is installed.
+
+**Option 2 — Download and double-click**
+
+1. Download **Teypo.zip** from the [latest release](../../releases/latest) and unzip it.
 2. Drag **Teypo** into your **Applications** folder and open it.
-3. macOS will say it cannot verify the app. Open **System Settings → Privacy & Security**, scroll down and click **Open Anyway**. You only do this once.
-4. Click the keyboard icon in the menu bar, choose the permission item, and turn on **Teypo** under **Input Monitoring**.
-5. Quit Teypo from its menu and open it again. Start typing.
+3. macOS shows the warning below. Click **Done**, then open **System Settings → Privacy & Security**, scroll down and click **Open Anyway**. You only do this once.
+
+<img src="docs/warning.png" width="260" alt="macOS warning: Teypo Not Opened">
+
+**Then, for both options**
+
+1. Click the keyboard icon in the menu bar, choose the permission item, and turn on **Teypo** under **Input Monitoring**.
+2. Quit Teypo from its menu and open it again. Start typing.
+
+### Why does macOS show a warning?
+
+The warning does not mean Teypo contains malware. macOS shows it for every app whose developer has not paid for Apple's developer program, which Teypo's has not yet. Things you can check yourself:
+
+- **No network access.** Teypo runs in the macOS sandbox and does not request network permission, so it cannot send anything anywhere. Verify with `codesign -d --entitlements - /Applications/Teypo.app`.
+- **File checksum.** The SHA-256 of `Teypo.zip` (version 1.0) is `07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28`. Verify with `shasum -a 256 Teypo.zip`.
+- **Scan it yourself.** Upload the zip to [VirusTotal](https://www.virustotal.com/gui/home/upload) before opening it.
 
 ### Privacy
 
@@ -48,11 +73,36 @@ Teypo nằm trên thanh menu và phát tiếng switch cơ thật mỗi khi bạn
 
 Cần macOS 13 trở lên. Được build và chạy thử trên máy Apple silicon.
 
-1. Tải **Teypo-1.0.zip** ở [bản phát hành mới nhất](../../releases/latest) rồi giải nén.
+**Cách 1 — Dùng Terminal (không hiện cảnh báo, nhanh nhất)**
+
+Mở ứng dụng **Terminal**, dán dòng này rồi nhấn Return:
+
+```bash
+curl -L https://github.com/trannhattan1112/Teypo/releases/latest/download/Teypo.zip -o /tmp/Teypo.zip && ditto -x -k /tmp/Teypo.zip /Applications && open /Applications/Teypo.app
+```
+
+Lệnh này tải Teypo từ chính trang này, đặt vào Applications và mở lên. Không cài thêm gì khác.
+
+**Cách 2 — Tải về rồi bấm đúp**
+
+1. Tải **Teypo.zip** ở [bản phát hành mới nhất](../../releases/latest) rồi giải nén.
 2. Kéo **Teypo** vào thư mục **Applications** và mở nó.
-3. macOS sẽ báo không xác minh được ứng dụng. Mở **System Settings → Privacy & Security**, kéo xuống và bấm **Open Anyway**. Chỉ cần làm một lần.
-4. Bấm biểu tượng bàn phím trên thanh menu, chọn mục cấp quyền, rồi bật **Teypo** trong **Input Monitoring**.
-5. Thoát Teypo từ menu của nó rồi mở lại. Gõ thử.
+3. macOS hiện cảnh báo như hình dưới. Bấm **Done**, rồi mở **System Settings → Privacy & Security**, kéo xuống và bấm **Open Anyway**. Chỉ cần làm một lần.
+
+<img src="docs/warning.png" width="260" alt="Cảnh báo của macOS: Teypo Not Opened">
+
+**Sau đó, với cả hai cách**
+
+1. Bấm biểu tượng bàn phím trên thanh menu, chọn mục cấp quyền, rồi bật **Teypo** trong **Input Monitoring**.
+2. Thoát Teypo từ menu của nó rồi mở lại. Gõ thử.
+
+### Vì sao macOS hiện cảnh báo?
+
+Cảnh báo này không có nghĩa Teypo chứa mã độc. macOS hiện nó với mọi ứng dụng mà nhà phát triển chưa đóng phí chương trình nhà phát triển của Apple, và Teypo hiện chưa đóng. Những điều bạn có thể tự kiểm tra:
+
+- **Không có quyền truy cập mạng.** Teypo chạy trong sandbox của macOS và không xin quyền mạng, nên không thể gửi gì đi đâu. Kiểm tra bằng lệnh `codesign -d --entitlements - /Applications/Teypo.app`.
+- **Mã kiểm tra file.** SHA-256 của `Teypo.zip` (phiên bản 1.0) là `07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28`. Kiểm tra bằng lệnh `shasum -a 256 Teypo.zip`.
+- **Tự quét virus.** Đưa file zip lên [VirusTotal](https://www.virustotal.com/gui/home/upload) trước khi mở.
 
 ### Quyền riêng tư
 
