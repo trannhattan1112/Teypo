@@ -51,7 +51,7 @@ The warning does not mean Teypo contains malware. macOS shows it for every app w
 
 - **No network access.** Teypo runs in the macOS sandbox and does not request network permission, so it cannot send anything anywhere. Verify with `codesign -d --entitlements - /Applications/Teypo.app`.
 - **File checksum.** The SHA-256 of `Teypo.zip` (version 1.0) is `07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28`. Verify with `shasum -a 256 Teypo.zip`.
-- **Scan it yourself.** Upload the zip to [VirusTotal](https://www.virustotal.com/gui/home/upload) before opening it.
+- **Virus scan: clean.** No security vendor on VirusTotal flagged this file as malicious. [See the scan result](https://www.virustotal.com/gui/file/07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28), or upload the zip there yourself to check.
 
 ### Privacy
 
@@ -102,7 +102,7 @@ Cảnh báo này không có nghĩa Teypo chứa mã độc. macOS hiện nó v�
 
 - **Không có quyền truy cập mạng.** Teypo chạy trong sandbox của macOS và không xin quyền mạng, nên không thể gửi gì đi đâu. Kiểm tra bằng lệnh `codesign -d --entitlements - /Applications/Teypo.app`.
 - **Mã kiểm tra file.** SHA-256 của `Teypo.zip` (phiên bản 1.0) là `07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28`. Kiểm tra bằng lệnh `shasum -a 256 Teypo.zip`.
-- **Tự quét virus.** Đưa file zip lên [VirusTotal](https://www.virustotal.com/gui/home/upload) trước khi mở.
+- **Quét virus: sạch.** Không hãng bảo mật nào trên VirusTotal đánh dấu file này là độc hại. [Xem kết quả quét](https://www.virustotal.com/gui/file/07861c314071476cd686942846476ae5459508b02f322da5959f6035aea5df28), hoặc tự đưa file zip lên đó để kiểm tra.
 
 ### Quyền riêng tư
 
